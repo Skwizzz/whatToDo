@@ -1,0 +1,269 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#e9f7ef;
+    color:#2f4f3f;
+}
+
+/* HEADER */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    background:#cfeedd;
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+header h1{
+    font-size:1.5rem;
+}
+
+nav a{
+    margin-left:20px;
+    text-decoration:none;
+    color:#2f4f3f;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#4caf80;
+}
+
+/* HERO */
+.hero{
+    height:80vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero .content h2{
+    font-size:3rem;
+}
+
+.hero .content p{
+    margin:15px 0;
+    font-size:1.2rem;
+}
+
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:25px;
+    background:#a8e6cf;
+    color:#1f3d2f;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#7fd6b5;
+    transform:translateY(-3px);
+}
+
+/* CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    gap:20px;
+    padding:60px 10%;
+}
+
+.card{
+    background:#dff5e5;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    background:#c8ecd7;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#cfeedd;
+    margin-top:40px;
+}
+.DOLOGO{
+    color: white;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+.todo-section{
+    padding:80px 10%;
+    text-align:center;
+}
+
+.todo-container{
+    max-width:500px;
+    margin:auto;
+    background:#dff5e5;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.todo-container input{
+    width:65%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    outline:none;
+}
+
+.todo-container button{
+    padding:12px 15px;
+    border:none;
+    border-radius:10px;
+    background:#a8e6cf;
+    cursor:pointer;
+    margin-left:10px;
+    transition:0.3s;
+}
+
+.todo-container button:hover{
+    background:#7fd6b5;
+}
+
+/* FILTRES */
+.filters{
+    margin-top:20px;
+    display:flex;
+    justify-content:center;
+    gap:10px;
+}
+
+.filters button{
+    background:white;
+    border:none;
+    padding:8px 12px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.filters button:hover{
+    background:#a8e6cf;
+}
+
+/* LISTE */
+#taskList{
+    list-style:none;
+    padding:0;
+    margin-top:20px;
+}
+
+#taskList li{
+    background:white;
+    margin:10px 0;
+    padding:12px;
+    border-radius:10px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    opacity:0;
+    transform:translateY(10px);
+    animation:fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* tâche faite */
+.done-text{
+    text-decoration:line-through;
+    opacity:0.5;
+}
+
+.delete{
+    background:red;
+    color:white;
+    border:none;
+    padding:5px 10px;
+    border-radius:8px;
+    cursor:pointer;
+}
+.priority-box{
+    margin-left:10px;
+    font-size:0.9rem;
+    cursor:pointer;
+}
+
+.priority{
+    border-left:5px solid #ff4d4d;
+}
+.switch{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    justify-content:center;
+    margin:15px 0 25px;
+    cursor:pointer;
+    user-select:none;
+}
+
+/* hide checkbox */
+.switch input{
+    display:none;
+}
+
+/* slider background */
+.slider{
+    width:50px;
+    height:28px;
+    background:#ccc;
+    border-radius:50px;
+    position:relative;
+    transition:0.3s;
+}
+
+/* cercle */
+.slider::before{
+    content:"";
+    position:absolute;
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    background:white;
+    top:3px;
+    left:3px;
+    transition:0.3s;
+    box-shadow:0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* ON state */
+.switch input:checked + .slider{
+    background:#ff4d4d;
+}
+
+.switch input:checked + .slider::before{
+    transform:translateX(22px);
+}
+
+/* text */
+.label-text{
+    font-size:0.95rem;
+    color:#2f4f3f;
+}

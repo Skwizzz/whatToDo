@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>whatToDo?</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h1>whatTo<span class="DOLOGO">Do</span></h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            
+        </nav>
+    </header>
+
+<section class="todo-section">
+
+    <h2>My To-Do List</h2>
+
+    <div class="todo-container">
+
+        <input type="text" id="taskInput" placeholder="Ajouter une tâche...">
+
+<label class="switch">
+    <input type="checkbox" id="priorityCheck">
+    <span class="slider"></span>
+    <span class="label-text">Do Before</span>
+</label>
+<button id="addBtn" type="button">Add</button>
+        <!-- FILTRES -->
+        <div class="filters">
+            <button data-filter="all">All</button>
+            <button data-filter="done">Done</button>
+            <button data-filter="todo">To Do</button>
+        </div>
+
+        <ul id="taskList"></ul>
+
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
